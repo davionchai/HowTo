@@ -1,0 +1,10 @@
+// ** File ** //
+
+// change ownership
+sudo chown -R [username]:[group] <directory name>
+// check useranme
+whoami 
+// check group
+groups
+
+// ** File ** //

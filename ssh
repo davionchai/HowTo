@@ -1,0 +1,10 @@
+**** Warning!! ****
+Always make sure modem/router/external connection has the relevant port opened! - speaking of 9 hours debugging after realizing the mistake.
+
+port 1000
+
+location
+/etc/ssh/
+
+//** protect your ssh **//
+play around with sshd_config

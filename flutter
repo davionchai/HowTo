@@ -1,0 +1,2 @@
+//start flutter at local ip and port//
+flutter run -d web-server --web-port 4001 --web-hostname 0.0.0.0

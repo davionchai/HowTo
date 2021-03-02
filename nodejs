@@ -1,0 +1,26 @@
+Node_Section
+starter kits
+
+# init
+npm init -y
+
+# nodemon
+npm install nodemon --save-dev // for developing
+
+# express
+npm install express --save // dependenceis required for running
+
+# change scripts in package.json
+"start": "nodemon src/index" // to start directly node
+# -> if using babel
+"start": "nodemon --exec babel-node src/index"
+
+# converting to es6 by installing babel
+npm install @babel/core @babel/node @babel/preset-env --save-dev
+
+# make a file babelrc to run babel out
+{
+    "presets": [
+        "@babel/preset-env"
+    ]
+}

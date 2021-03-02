@@ -1,0 +1,47 @@
+[For version 2.28.0 in vscode]
+
+*** git init **
+When git init, git will automatic create a master branch in the .git folder
+
+//check staging//
+git status
+
+//Local Repo//
+git init [Subfolder name]
+
+//toogle stage//
+git add [File name]
+
+//commit staged file//
+git commit -m "[Commit Message for logging]"
+
+//check git record//
+git log
+
+//retrieve from latest record//
+git checkout [Filename]
+
+//check changes & diff//
+git diff [File name]
+
+*** GitHub ***
+//lockon repo//
+git remote add [origin] [github account url/`naming.git`]
+
+//push to repo & its branch//
+git push -u [local repo]/[branch]
+
+//updating git
+git fetch github
+
+//find diff with old update
+git diff master github
+
+//force fast forward and merge
+git merge github/master
+
+//check which repo diff from github to master
+git cherry master github/master
+
+//check which repo diff from master to github, what's missing from github(remote)
+git cherry github/master

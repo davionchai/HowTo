@@ -1,0 +1,35 @@
+//** Initiate connection to EC2 **//
+-Launch instance from AWS console first & proceed with the setup
+-Once launch, download the pem file & save it somewhere else
+-Copy the IPv4 Public IP
+    // For mac/linux
+    -chmod 0400 [pem file]  # This is to change permission
+    -ssh -i [pem file] [ec2-user (this is for aws linux package, need to for other debian/windows)]@[IPv4]  # This is to ssh connect port 22 of aws ec2
+    // PuttY
+    -Launch PuttYGen, load the pem file, export it to .ppk
+    -Launch PuttY
+    -Set HostName > ec2-user@IPv4 Port 22
+    -Go to Connection > SSH > Auth > Load ppk file
+    -Run & enjoy
+    // Windows
+    -check cmd has ssh support by keying in SSH only
+    -change ownership of pem file to user with admin only, disable all other inheritance and delete
+    -ssh -i [pem file] [ec2-user (this is for aws linux package, need to for other debian/windows)]@[IPv4]  # This is to ssh connect port 22 of aws ec2
+    // VSCode
+    -f1 > open config
+    -create below:
+        Host [Your desire name, i normally put aws-serviceType ie: aws-ec2]
+        HostName [Public Dns]
+        User [ec2-user]
+        IdentityFile [D:\aws\credential\EC2Tutorial.pem]
+
+//** About UserData **//
+-Its about automation of installing upon starting, something like a docker compose
+-EC2 user data is automatically ran in sudo
+    //installing apache
+    #!/bin/bash
+    yum update -y
+    yum install -y httpd.x86_64
+    systemctl start httpd.service
+    systemctl enable httpd.service
+    echo "Hello World from $(hostname -f)" > /var/www/html/index.html
