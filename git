@@ -10,7 +10,7 @@ git status
 git init [Subfolder name]
 
 //toogle stage//
-git add [File name]
+git add [File name or . to stage all] 
 
 //commit staged file//
 git commit -m "[Commit Message for logging]"
