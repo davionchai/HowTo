@@ -1,3 +1,8 @@
+//setup with venv
+pip install ipykernel
+pip install jupyter
+ipython kernel install --user --name=[kernel name]
+
 jupyter notebook --ip [local id] --port [port]
 
 

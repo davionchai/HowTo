@@ -24,3 +24,21 @@ npm install @babel/core @babel/node @babel/preset-env --save-dev
         "@babel/preset-env"
     ]
 }
+
+
+# start background task using pm2 with basic command
+
+// install as global (one time basis)
+sudo npm install pm2 -g
+
+// initiate child task
+pm2 --name [Your custom process name] start npm -- start
+
+// check task
+pm2 ps
+
+// stop task
+pm2 delete [index id]
+
+// check logs
+pm2 logs

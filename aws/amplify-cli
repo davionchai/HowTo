@@ -1,0 +1,21 @@
+//** Amplify Cheatsheet **//
+# To start a project
+amplify init
+
+# To add a function
+amplify add function
+
+# To test your function
+amplify mock function {function name}
+
+# Check amplify status
+amplify status
+
+# To add an api gateway
+amplify add api
+
+# To update api gateway
+amplify update api
+
+# Upload code to AWS cloud
+amplify push

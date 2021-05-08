@@ -7,4 +7,13 @@ whoami
 // check group
 groups
 
+// ownership permission rules
+4 read
+2 write
+1 execute
+0 none
+[user][group][others]
+example:
+chmod 0400 = sticky false, user read only group none others none
+
 // ** File ** //

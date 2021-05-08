@@ -1,0 +1,50 @@
+// enter postgres super user
+sudo -i -u postgres psql
+
+// create new user for interaction with postgres
+sudo -u postgres createuser --interactive
+sudo -u postgres creatdb [database name]
+
+// connect to a database without sudo -u postgres
+psql -U [role] [database name]
+
+//** postgres command **//
+
+// create role
+create role [name] 
+superuser 
+login 
+password '[password]' 
+connection limit [amount] 
+valid until '2020-01-31'
+createdb;
+
+// create table
+CREATE TABLE [tablename] (
+    id INT check(id >= 1 and id <=  5),
+    username TEXT
+);
+
+// alter table
+ALTER TABLE [tablename]
+ADD COLUMN [column name] [data type]
+DROP COLUMN [column name]
+
+// delete table
+DROP TABLE [tablename]
+
+// delete database
+switch database
+DROP DATABASE [database name]
+
+// change database connection
+\c [database]
+
+// show role
+\du
+
+// show database
+\l
+
+// exit database
+\q
