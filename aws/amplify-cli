@@ -2,6 +2,9 @@
 # To start a project
 amplify init
 
+# Edit project
+amplify configure project
+
 # To add a function
 amplify add function
 
@@ -19,3 +22,6 @@ amplify update api
 
 # Upload code to AWS cloud
 amplify push
+
+# Delete & clean reosurce amplify
+amplify delete
