@@ -1,0 +1,8 @@
+# create
+```bash
+tar -czvf dir.tar.gz <some-dir>
+```
+# extract
+```bash
+tar -xzvf dir.tar.gz
+```

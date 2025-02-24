@@ -1,2 +1,22 @@
 // setup gpg commits for vscode with wsl
 https://www.39digits.com/signed-git-commits-on-wsl2-using-visual-studio-code
+
+// backup
+# create
+```bash
+gpg --export --armor > backup-gpg-pub.asc
+gpg --export-secret-keys --armor > backup-gpg-priv.asc
+gpg --export-ownertrust > backup-gpg-trust.asc
+```
+
+# restore
+```bash
+gpg --import backup-gpg-pub.asc
+gpg --import backup-gpg-priv.asc
+gpg --import-ownertrust backup-gpg-trust.asc
+```
+
+# verify
+```bash
+gpg --list-secret-keys
+```
