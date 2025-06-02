@@ -20,3 +20,8 @@ gpg --import-ownertrust backup-gpg-trust.asc
 ```bash
 gpg --list-secret-keys
 ```
+
+// setup for helm with gnupg2
+```bash
+sudo apt-get install gnupg2
+```
